@@ -7,13 +7,15 @@ const skillGroups = [
     color: "from-primary to-primary-glow",
     glow: "shadow-glow",
     skills: [
-      { name: "React.js", level: 88 },
-      { name: "Angular.js", level: 90 },
-      { name: "Vue.js", level: 78 },
-      { name: "TypeScript", level: 88 },
-      { name: "Tailwind CSS", level: 92 },
-      { name: "PrimeNG / PrimeFlex", level: 85 },
-      { name: "UIKit", level: 70 },
+      { name: "React.js" },
+      { name: "Angular.js" },
+      { name: "Vue.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "PrimeNG / PrimeFlex" },
+      { name: "UIKit" },
+      { name: "TanStack" },
+      { name: "HTML / CSS" },
     ],
   },
   {
@@ -22,11 +24,11 @@ const skillGroups = [
     color: "from-secondary to-secondary",
     glow: "shadow-glow-purple",
     skills: [
-      { name: "Node.js", level: 88 },
-      { name: "Express.js", level: 85 },
-      { name: "Laravel PHP", level: 75 },
-      { name: "REST APIs", level: 90 },
-      { name: "JWT / Sessions", level: 85 },
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "Laravel PHP" },
+      { name: "REST APIs" },
+      { name: "JWT / Sessions" },
     ],
   },
   {
@@ -35,11 +37,11 @@ const skillGroups = [
     color: "from-accent to-accent",
     glow: "shadow-glow-teal",
     skills: [
-      { name: "PostgreSQL", level: 85 },
-      { name: "MySQL", level: 88 },
-      { name: "MSSQL", level: 82 },
-      { name: "Drizzle ORM", level: 80 },
-      { name: "SQL", level: 88 },
+      { name: "PostgreSQL" },
+      { name: "MySQL" },
+      { name: "MSSQL" },
+      { name: "Drizzle ORM" },
+      { name: "SQL" },
     ],
   },
   {
@@ -48,11 +50,10 @@ const skillGroups = [
     color: "from-primary to-accent",
     glow: "shadow-glow",
     skills: [
-      { name: "Git / GitHub", level: 92 },
-      { name: "CI/CD", level: 75 },
-      { name: "Agile / Scrum", level: 82 },
-      { name: "TanStack", level: 80 },
-      { name: "Vite", level: 85 },
+      { name: "Git / GitHub" },
+      { name: "CI/CD" },
+      { name: "Agile / Scrum" },
+      { name: "Vite" },
     ],
   },
   {
@@ -61,10 +62,11 @@ const skillGroups = [
     color: "from-secondary to-accent",
     glow: "shadow-glow-purple",
     skills: [
-      { name: "Figma", level: 85 },
-      { name: "Adobe Illustrator", level: 80 },
-      { name: "Canva", level: 90 },
-      { name: "Capcut", level: 75 },
+      { name: "Figma" },
+      { name: "Adobe Illustrator" },
+      { name: "Canva" },
+      { name: "Capcut" },
+      { name: "CorelDRAW" },
     ],
   },
   {
@@ -72,12 +74,7 @@ const skillGroups = [
     title: "Languages",
     color: "from-accent to-primary",
     glow: "shadow-glow-teal",
-    skills: [
-      { name: "JavaScript", level: 92 },
-      { name: "TypeScript", level: 88 },
-      { name: "PHP", level: 75 },
-      { name: "HTML / CSS", level: 95 },
-    ],
+    skills: [{ name: "JavaScript" }, { name: "TypeScript" }, { name: "PHP" }],
   },
 ];
 
@@ -105,7 +102,9 @@ const Skills = () => {
               style={{ animationDelay: `${gi * 100}ms` }}
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className={`h-12 w-12 rounded-2xl bg-gradient-to-br ${group.color} grid place-items-center ${group.glow} group-hover:scale-110 transition-transform`}>
+                <div
+                  className={`h-12 w-12 rounded-2xl bg-gradient-to-br ${group.color} grid place-items-center ${group.glow} group-hover:scale-110 transition-transform`}
+                >
                   <group.icon className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div>
@@ -116,21 +115,13 @@ const Skills = () => {
                 </div>
               </div>
 
-              <div className="space-y-3">
+              <div className="flex flex-wrap gap-1">
                 {group.skills.map((skill) => (
-                  <div key={skill.name}>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-sm font-medium">{skill.name}</span>
-                      <span className="text-xs font-mono text-muted-foreground">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-                      <div
-                        className={`h-full rounded-full bg-gradient-to-r ${group.color} transition-all duration-1000`}
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
+                  <div
+                    key={skill.name}
+                    className="flex items-center mb-1.5 border py-2 px-3 rounded-3xl hover:border-white/20"
+                  >
+                    <span className="text-sm font-medium">{skill.name}</span>
                   </div>
                 ))}
               </div>
