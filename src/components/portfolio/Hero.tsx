@@ -42,9 +42,9 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background pointer-events-none" />
 
       <div className="container relative z-10 mx-auto px-4 md:px-8 py-12">
-        <div className="max-w-4xl mx-auto text-center space-y-10 animate-fade-in-up">
+        <div className="max-w-4xl mx-auto text-center space-y-8 pt-10 animate-fade-in-up">
           {/* Status pill */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-mono mt-10">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-mono mt-10">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
@@ -52,7 +52,7 @@ const Hero = () => {
             <span className="text-muted-foreground">
               Available for opportunities/projects
             </span>
-          </div>
+          </div> */}
 
           {/* Greeting */}
           <p className="font-mono text-sm md:text-base text-primary">
